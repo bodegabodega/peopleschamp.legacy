@@ -1,0 +1,44 @@
+<div class="sidebar navigation">
+  <h6>Guidelines</h6>
+  <ul class="list-unstyled">
+    {{#each guidelines}}
+      {{#if_eq ../title this.title}}
+      <li class="highlight">
+        <span>{{ title }}</span>
+      </li>
+      {{else}}
+      <li>
+        <a href="/{{ path }}">{{ title }}</a>
+      </li>
+      {{/if_eq}}
+    {{/each}}
+  </ul>
+  <h6>Templates</h6>
+  <ul class="list-unstyled">
+    {{#each templates}}
+      {{#if_eq ../title this.title}}
+      <li class="highlight">
+        <span>{{ title }}</span>
+      </li>
+      {{else}}
+      <li>
+        <a href="/{{ path }}">{{ title }}</a>
+      </li>
+      {{/if_eq}}
+    {{/each}}
+  </ul>
+  <h6>Components</h6>
+  <ul class="list-unstyled">
+    {{#each components}}
+      {{#if_eq ../title this.title}}
+      <li class="highlight">
+        <span>{{ title }}</span>
+      </li>
+      {{else}}
+      <li>
+        <a href="/{{ path }}">{{ title }}</a>
+      </li>
+      {{/if_eq}}
+    {{/each}}
+  </ul>
+</div>

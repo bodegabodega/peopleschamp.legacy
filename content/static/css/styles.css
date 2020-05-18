@@ -1,0 +1,145 @@
+/**
+ * Typography
+ */
+h1, h2, h3, h4, h5, h6 {
+font-family: 'Playfair Display', serif;
+/* font-family: Georgia, Times, 'Times New Roman', serif; */
+}
+h1 {
+  line-height: 4.2rem;
+}
+h2 {
+  font-size: 3.6rem;
+  line-height: 5.2rem;
+}
+h3 {
+  font-size: 2.5rem;
+}
+p {
+font-family: 'Open Sans', sans-serif;
+}
+/**
+ * Links
+ */
+a {
+  /* color: #111; */
+  text-decoration: none;
+}
+
+/**
+ * Navigation
+ */
+.primary.navigation {
+  /* background-color: #333; */
+}
+
+.primary.navigation h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.primary.navigation .links {
+  text-align: center;
+  white-space: nowrap;
+}
+.primary.navigation .links:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+}
+.primary.navigation .links ul {
+  display: inline-block;
+  vertical-align: middle;
+}
+.primary.navigation .links ul li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+@media (min-width: 750px) {
+  .primary.navigation {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 250px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 2rem;
+  }
+  .primary.navigation .links {
+    text-align: left;
+    white-space: nowrap;
+  }
+  .primary.navigation .links:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+  }
+  .primary.navigation h1 {
+    text-align: left;
+  }
+  .primary.navigation .links ul {
+    display: inline-block;
+    vertical-align: baseline;
+  }
+  .primary.navigation .links ul li {
+    display: block;
+    margin: 0;
+  }
+}
+
+/**
+ * Primary Container
+ */
+ @media (min-width: 750px) {
+  .primary.container {
+    padding-top: 2rem;
+    margin-left: 250px;
+    max-width: 450px;
+  }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  .primary.container {
+    margin-left: 300px;
+    max-width: 650px;
+  }
+  .primary.navigation {
+    padding-left: 25px;
+  }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+  .primary.container {
+    margin-left: 350px;
+    max-width: 700px;
+  }
+  .primary.navigation {
+    padding-left: 50px;
+  }
+}
+
+/**
+ * Utilities
+ */
+
+/**
+ * @bugfix Prevent webkit from removing list semantics
+ * https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html
+ * 1. Add a non-breaking space
+ * 2. Make sure it doesn't mess up the DOM flow
+ */
+ .list-unstyled > li:before {
+	content: "\200B"; /* 1 */
+	position: absolute; /* 2 */
+}
+.list-unstyled {
+  list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}
