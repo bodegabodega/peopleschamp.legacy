@@ -3,6 +3,7 @@
   "private": true,
   "dependencies": {},
   "scripts": {
+    "debug": "export DEBUG=metalsmith:metadata && nodemon --watch content --watch lib --watch templates --ext md,js,css,hbs lib/scripts/develop.js & livereload ./build -w 1000 & serve ./build",
     "develop": "nodemon --watch content --watch lib --watch templates --ext md,js,css,hbs lib/scripts/develop.js & livereload ./build -w 1000 & serve ./build",
     "deploy": "node lib/scripts/deploy.js"
   },
@@ -24,6 +25,7 @@
     "metalsmith-permalinks": "^2.2.0",
     "metalsmith-register-helpers": "^0.4.1",
     "metalsmith-s3": "^0.1.0",
+    "metalsmith-tags": "^2.0.0",
     "nodemon": "^2.0.3",
     "serve": "^11.3.0"
   }

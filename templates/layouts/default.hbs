@@ -1,64 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>{{ title }} &bull; {{ name }}</title>
-  <meta name="description" content="{{ description }}">
-  <meta name="author" content="">
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!--link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css"-->
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  
-  <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet" href="/css/skeleton.css">
-  <link rel="stylesheet" href="/css/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@900&display=swap" rel="stylesheet">
-  {{#if background_image}}
-  <style>
-    html { 
-      background: url({{ background_image }}) no-repeat center center fixed; 
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }
-  </style>
-  {{/if}}
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="shortcut icon" href="/images/favicon.ico">
-
-  <!-- Javascript
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="http://localhost:35729/livereload.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.0/highlight.min.js" integrity="sha256-l2UBp0BIlmKgfSSMlsHCOoKDJ4N7nE0mqxKZX/u3AJA=" crossorigin="anonymous"></script>
-
-</head>
+{{>_head}}
 <body>
-  <div class="primary navigation">
-    <div class="container">
-      <h1><a href="/">Peoples Champ</a></h1>
-      <div class="links">
-        <ul class="list-unstyled">
-          <li><a href="/introduction.html">Introduction</a></li>
-          <li><a href="/">Item</a></li>
-          <li><a href="/">Item</a></li>
-          <li><a href="/">Item</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  {{>_primary_navigation}}
   <div class="primary container">
     <div class="row">
       <div class="twelve columns">

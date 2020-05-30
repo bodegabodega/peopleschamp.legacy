@@ -1,0 +1,28 @@
+<script type="text/javascript">
+  const loadTrack = function() {
+    player.source = {
+      type: 'audio',
+      title: this.dataset.name,
+      sources: [
+        {
+          src: this.dataset.audioFilepath,
+          type: 'audio/mp3',
+        }
+      ],
+    };
+    trackName.innerHTML = this.dataset.name;
+    trackContent.innerHTML = this.dataset.contents;
+    player.play();
+    return false;
+  }
+  const player = new Plyr('audio', {
+    controls: [ 'play', 'progress', 'airplay', 'current-time']
+  });
+  const trackName = document.getElementById('track-name');
+  const trackContent = document.getElementById('track-content');
+  var tracks = document.getElementsByClassName('audio-button');
+  for (let track of tracks) {
+    track.onclick = loadTrack;
+  }
+  loadTrack.apply(tracks[0])
+</script>

@@ -1,3 +1,7 @@
+:root {
+  --plyr-color-main: #1EAEDB;
+}
+
 /**
  * Typography
  */
@@ -10,7 +14,7 @@ h1 {
 }
 h2 {
   font-size: 3.6rem;
-  line-height: 5.2rem;
+  line-height: 3rem;
 }
 h3 {
   font-size: 2.5rem;
@@ -30,12 +34,12 @@ a {
  * Navigation
  */
 .primary.navigation {
-  /* background-color: #333; */
+  /* background: rgb(0,0,0);
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); */
 }
 
 .primary.navigation h1 {
   text-align: center;
-  margin-bottom: 1rem;
 }
 .primary.navigation .links {
   text-align: center;
@@ -97,15 +101,27 @@ a {
  @media (min-width: 750px) {
   .primary.container {
     padding-top: 2rem;
-    margin-left: 250px;
+    margin-left: 245px;
     max-width: 450px;
+  }
+  .headline-container {
+    display: flex;
+    /* justify-content: flex-end; */
+    align-items: flex-end;
+    height: 200px;
+    /* border: solid 1px red; */
+    margin-bottom: 5rem;
+  }
+  .headline-container h1,
+  .headline-container h2 {
+    margin-bottom: 0;
   }
 }
 
 /* Larger than desktop */
 @media (min-width: 1000px) {
   .primary.container {
-    margin-left: 300px;
+    margin-left: 275px;
     max-width: 650px;
   }
   .primary.navigation {
@@ -116,12 +132,32 @@ a {
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {
   .primary.container {
-    margin-left: 350px;
+    margin-left: 305px;
     max-width: 700px;
   }
   .primary.navigation {
     padding-left: 50px;
   }
+}
+
+/* Player */
+.plyr {
+  margin-bottom: 2rem;
+}
+button.plyr__control {
+  margin-bottom: 0;
+}
+.plyr--audio .plyr__controls {
+  padding: 0;
+}
+.plyr__controls__item:first-child {
+  padding-left: 0;
+  padding-right: 0;
+}
+.plyr__controls__item:first-child:hover {
+  /* padding-left: 10px; */
+  background-color: transparent;
+  color: #1EAEDB;
 }
 
 /**
@@ -143,3 +179,40 @@ a {
 	margin-left: 0;
 	padding-left: 0;
 }
+
+.list-inline {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.list-inline li {
+  display: inline-block;
+}
+ul ul {
+  margin: 0;
+}
+
+
+/**
+ * Labels
+ */
+li.label {
+  margin: 0;
+}
+li.label a {
+  height: 1rem;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  min-width: 1rem;
+  display: inline-block;
+}
+li.label.hip-hop a {
+  background-color: aqua;
+}
+li.label.instrumental a {
+  background-color: blueviolet;
+}
+li.label.remix a {
+  background-color: green;
+}
+

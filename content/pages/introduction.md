@@ -4,11 +4,9 @@ name: Introduction
 
 ## Introduction
 
-Hello. My name is **Nikolai** and I like to make things. 
+Hello. My name is **Nikolai** and I like to make things.
 
-![Nikolai Polaroid](/images/nikolai-polaroid.png)
-
-Born in New Orleans to a piano player and a fine artist, I've spent each chapter of my life trying to make goods of the highest quality.
+I am self taught in all of my disciplines although I pride myself on learning from every facet of my life. My undergraduate work in Philosophy has made computer programming understandable. The lessons I learned from managing a clothing store at 18 has made leading a team of developers and an engineering process less frightening. And my years as night club disc jockey has forced me to be a marketer. I understand this isn't a novel concept but I pride myself on how I exemplify it. **The Peoples Champ**.
 
 ### Software
 

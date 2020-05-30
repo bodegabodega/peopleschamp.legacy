@@ -1,0 +1,22 @@
+<ul class="list-unstyled">
+  {{#each this}}
+    {{#if_eq ../name this.name}}
+      {{else}}
+      <li>
+        <a href="/{{ path }}"
+           class="audio-button"
+           data-audio-filepath="{{ filepath  }}"
+           data-name="{{ name }}"
+           data-contents="{{ innerContent }}"
+           >{{ name }}</a>
+        <ul class="list-inline">
+          {{#each tags}}
+            <li class="label {{slug}}">
+              <a href="/tracks/tagged/{{ slug }}"></a>
+            </li>
+          {{/each}}
+        </ul>
+      </li>
+    {{/if_eq}}
+  {{/each}}
+</ul>
