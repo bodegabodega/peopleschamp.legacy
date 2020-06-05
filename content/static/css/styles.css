@@ -1,16 +1,21 @@
 :root {
+  --color-highlight: #1EAEDB;
   --plyr-color-main: #1EAEDB;
+  --color-text: #555;
 }
 
 /**
  * Typography
  */
 h1, h2, h3, h4, h5, h6 {
-font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif;
 /* font-family: Georgia, Times, 'Times New Roman', serif; */
 }
 h1 {
   line-height: 4.2rem;
+}
+h1 a {
+  color: var(--color-highlight);
 }
 h2 {
   font-size: 3.6rem;
@@ -20,13 +25,14 @@ h3 {
   font-size: 2.5rem;
 }
 p {
-font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  color: var(--color-text);
 }
 /**
  * Links
  */
 a {
-  /* color: #111; */
+  color: var(--color-text);
   text-decoration: none;
 }
 
@@ -206,8 +212,17 @@ li.label a {
   min-width: 1rem;
   display: inline-block;
 }
-li.label.hip-hop a {
+li.text-label a {
+  font-weight: bolder;
+  font-size: 1rem;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  padding: .5rem;
+}
+li.label.hip-hop a,
+li.text-label.hip-hop a:hover {
   background-color: aqua;
+  color: #fff;
 }
 li.label.instrumental a {
   background-color: blueviolet;
@@ -215,4 +230,3 @@ li.label.instrumental a {
 li.label.remix a {
   background-color: green;
 }
-

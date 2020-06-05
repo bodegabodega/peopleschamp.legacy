@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "debug": "^4.1.1",
+    "distinct-colors": "^3.0.0",
     "handlebars": "^4.7.6",
     "highlight.js": "^10.0.1",
     "highlighter": "^0.1.0",

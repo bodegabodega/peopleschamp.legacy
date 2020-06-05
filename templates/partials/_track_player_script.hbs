@@ -12,6 +12,10 @@
     };
     trackName.innerHTML = this.dataset.name;
     trackContent.innerHTML = this.dataset.contents;
+    trackTags.innerHTML = '<ul class="list-inline">' + this.dataset.tags.split(',').map(function(item){
+      const nameLabel = item.split('|');
+      return `<li class="text-label ${nameLabel[1]}"><a href="/tracks/tagged/${nameLabel[1]}">${nameLabel[0]}</a></li>`
+    }).join('') + '</ul>';
     player.play();
     return false;
   }
@@ -20,9 +24,10 @@
   });
   const trackName = document.getElementById('track-name');
   const trackContent = document.getElementById('track-content');
+  const trackTags = document.getElementById('track-tags');
   var tracks = document.getElementsByClassName('audio-button');
   for (let track of tracks) {
     track.onclick = loadTrack;
   }
-  loadTrack.apply(tracks[0])
+  {{#if_eq environment 'production'}}loadTrack.apply(tracks[0]){{/if_eq}}
 </script>

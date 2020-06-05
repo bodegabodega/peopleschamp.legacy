@@ -8,6 +8,7 @@
            data-audio-filepath="{{ filepath  }}"
            data-name="{{ name }}"
            data-contents="{{ innerContent }}"
+           data-tags="{{#each tags}}{{ name }}|{{ slug }},{{/each}}"
            >{{ name }}</a>
         <ul class="list-inline">
           {{#each tags}}
