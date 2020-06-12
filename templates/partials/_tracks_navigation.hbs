@@ -10,9 +10,9 @@
            data-contents="{{ innerContent }}"
            data-tags="{{#each tags}}{{ name }}|{{ slug }},{{/each}}"
            >{{ name }}</a>
-        <ul class="list-inline">
+        <ul class="color-bar">
           {{#each tags}}
-            <li class="label {{slug}}">
+            <li class="{{slug}}">
               <a href="/tracks/tagged/{{ slug }}"></a>
             </li>
           {{/each}}

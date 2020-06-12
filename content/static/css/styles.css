@@ -193,6 +193,7 @@ button.plyr__control {
 }
 .list-inline li {
   display: inline-block;
+  margin-right: .5rem;
 }
 ul ul {
   margin: 0;
@@ -216,7 +217,7 @@ li.text-label a {
   font-weight: bolder;
   font-size: 1rem;
   text-transform: uppercase;
-  border-radius: 1rem;
+  border-radius: .25rem;
   padding: .5rem;
 }
 li.label.hip-hop a,

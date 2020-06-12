@@ -5,9 +5,11 @@
   "scripts": {
     "debug": "export DEBUG=metalsmith:metadata && nodemon --watch content --watch lib --watch templates --ext md,js,css,hbs lib/scripts/develop.js & livereload ./build -w 1000 & serve ./build",
     "develop": "nodemon --watch content --watch lib --watch templates --ext md,js,css,hbs lib/scripts/develop.js & livereload ./build -w 1000 & serve ./build",
-    "deploy": "node lib/scripts/deploy.js"
+    "deploy": "node lib/scripts/deploy.js",
+    "download": "node lib/scripts/download.js"
   },
   "devDependencies": {
+    "aws-cli": "0.0.2",
     "debug": "^4.1.1",
     "distinct-colors": "^3.0.0",
     "handlebars": "^4.7.6",

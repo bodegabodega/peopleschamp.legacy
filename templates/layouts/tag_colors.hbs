@@ -1,0 +1,26 @@
+{{#each tagColors}}
+li.label.{{slug}} a,
+li.text-label.{{slug}} a {
+  background-color: {{hex}};
+  color: #fff;
+}
+li.label.{{slug}} a:hover,
+li.text-label.{{slug}} a:hover {
+  background-color: {{hexHover}};
+}
+ul.color-bar {
+  display: flex;
+  list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+ul.color-bar li {
+  flex-grow: 1;
+  margin-bottom: .25rem;
+}
+ul.color-bar li.{{slug}} a {
+  display: block;
+  height: 2px;
+  background-color: {{hex}};
+}
+{{/each}}
