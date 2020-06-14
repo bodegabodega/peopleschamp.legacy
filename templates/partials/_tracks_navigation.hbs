@@ -6,7 +6,9 @@
         <a href="/{{ path }}"
            class="audio-button"
            data-audio-filepath="{{ filepath  }}"
+           data-presenter="{{ presenter }}"
            data-name="{{ name }}"
+           data-specifier="{{ specifier }}"
            data-contents="{{ innerContent }}"
            data-tags="{{#each tags}}{{ name }}|{{ slug }},{{/each}}"
            >{{ name }}</a>

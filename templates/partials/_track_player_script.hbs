@@ -10,7 +10,9 @@
         }
       ],
     };
+    trackPresenter.innerHTML = this.dataset.presenter;
     trackName.innerHTML = this.dataset.name;
+    trackSpecifier.innerHTML = this.dataset.specifier;
     trackContent.innerHTML = this.dataset.contents;
     trackTags.innerHTML = '<ul class="list-inline">' + this.dataset.tags.split(',').map(function(item){
       const nameLabel = item.split('|');
@@ -22,12 +24,25 @@
   const player = new Plyr('audio', {
     controls: [ 'play', 'progress', 'airplay', 'current-time']
   });
+  const trackPresenter = document.getElementById('track-presenter');
   const trackName = document.getElementById('track-name');
+  const trackSpecifier = document.getElementById('track-specifier');
   const trackContent = document.getElementById('track-content');
   const trackTags = document.getElementById('track-tags');
   var tracks = document.getElementsByClassName('audio-button');
   for (let track of tracks) {
     track.onclick = loadTrack;
   }
-  {{#if_eq environment 'production'}}loadTrack.apply(tracks[0]){{/if_eq}}
+  {{#if_eq environment 'development'}}
+    const initialTrackName = document.getElementById('player').dataset.loadTrack;
+    let initialTrackIndex = 0;
+    if(initialTrackName) {
+      tracks.forEach((track, index) => {
+        if(track.dataset.name == initialTrackName) {
+          initialTrackIndex = index;
+        }
+      })
+    }
+    loadTrack.apply(tracks[initialTrackIndex])
+  {{/if_eq}}
 </script>

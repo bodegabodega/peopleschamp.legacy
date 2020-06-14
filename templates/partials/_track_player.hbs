@@ -1,6 +1,10 @@
-<div class="headline-container">
-  <h2 id="track-name">Select a Track</h2>
+<div class="track headline-container">
+  <div>
+    <h5 id="track-presenter"></h5>
+    <h2 id="track-name">Select a Track</h2>
+    <h5 id="track-specifier"></h5>
+  </div>
 </div>
-<audio id="player" controls></audio>
+<audio id="player" controls{{#if_eq name 'Tracks'}}{{else}} data-load-track="{{ name }}"{{/if_eq}}></audio>
 <div id="track-tags"></div>
 <div id="track-content"></div>
